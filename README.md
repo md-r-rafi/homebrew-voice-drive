@@ -6,8 +6,13 @@ no account or internet needed to dictate.
 ## Install
 
 ```sh
-brew install --cask --no-quarantine md-r-rafi/voice-drive/voicedrive
+brew tap md-r-rafi/voice-drive
+brew trust md-r-rafi/voice-drive          # Homebrew 6.0+ only (older versions skip this)
+brew install --cask --no-quarantine voicedrive
 ```
+
+`brew trust` is required on newer Homebrew, which refuses to run third-party
+casks until you explicitly trust the tap.
 
 `--no-quarantine` is required because the app is **ad-hoc signed** (not notarized
 via a paid Apple Developer account). Without it, macOS Gatekeeper warns on first
