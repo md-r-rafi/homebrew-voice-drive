@@ -10,7 +10,7 @@ cask "voicedrive" do
   # The app is ad-hoc signed (no paid Apple Developer ID / notarization yet).
   # Install with `--no-quarantine` to open it without the Gatekeeper warning:
   #   brew install --cask --no-quarantine md-r-rafi/voice-drive/voicedrive
-  depends_on macos: :big-sur
+  depends_on macos: ">= :big_sur"
 
   app "VoiceDrive.app"
 
